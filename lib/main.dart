@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
       title: "Challenge 1",
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: "Hk Grotesk",
       ),
       debugShowCheckedModeBanner: false,
       home: MainScreen(),
