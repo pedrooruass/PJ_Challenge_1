@@ -1,4 +1,5 @@
 import 'package:challenge_app/helps/app_colors.dart';
+import 'package:challenge_app/helps/box_app.dart';
 import 'package:challenge_app/screens/components/first_box_component.dart';
 import 'package:challenge_app/screens/components/first_navigator_component.dart';
 import 'package:challenge_app/screens/components/net_worth_componet.dart';
@@ -19,22 +20,24 @@ class _MainScreenState extends State<MainScreen> {
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         elevation: 0,
-        leading: Icon(
-          Icons.settings_outlined,
-          size: 30,
+        leading: BoxApp(
+          child: Icon(
+            Icons.settings_outlined,
+            size: 30,
+          ),
         ),
         title: Text(
           "Grow",
-          style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
+          style: TextStyle(
+              color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
         ),
         actions: [
-          Padding(
-            padding: const EdgeInsets.all(15),
+          BoxApp(
             child: Icon(
               Icons.add,
               size: 30,
             ),
-          )
+          ),
         ],
         centerTitle: true,
         backgroundColor: Colors.transparent,
@@ -61,31 +64,33 @@ class _MainScreenState extends State<MainScreen> {
             width: double.infinity,
             height: 275,
           ),
-          ListView(
-            padding: EdgeInsets.fromLTRB(30, 100, 30, 10),
-            children: [
-              FirstNavigatorComponent(
-                onTap: (touchValue) {
-                  setState(() {
-                    index = touchValue;
-                  });
-                },
-                indexSelected: index,
-              ),
-              SizedBox(height: 15),
-              // Scroll
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    NetWorthComponent(),
-                    FirstBoxComponent(),
-                    SecondBoxComponent(),
-                  ],
+          BoxApp(
+            child: ListView(
+              padding: EdgeInsets.only(top: 100, bottom: 10),
+              children: [
+                FirstNavigatorComponent(
+                  onTap: (touchValue) {
+                    setState(() {
+                      index = touchValue;
+                    });
+                  },
+                  indexSelected: index,
                 ),
-              ),
-            ],
+                SizedBox(height: 15),
+                // Scroll
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      NetWorthComponent(),
+                      FirstBoxComponent(),
+                      SecondBoxComponent(),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

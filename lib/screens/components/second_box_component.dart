@@ -34,7 +34,7 @@ class SecondBoxComponent extends StatelessWidget {
       leading: CircleAvatar(
         backgroundColor: Colors.grey.shade200,
         child: Padding(
-          padding: const EdgeInsets.all(6 ),
+          padding: const EdgeInsets.all(6),
           child: Image.asset(image,),
         ),
       ),
