@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class FirstNavigatorComponent extends StatelessWidget {
   final void Function(int) onTap;
   final int indexSelected;
-  FirstNavigatorComponent({this.onTap, this.indexSelected});
+  FirstNavigatorComponent({required this.onTap, required this.indexSelected});
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -31,7 +31,7 @@ class FirstNavigatorComponent extends StatelessWidget {
     );
   }
 
-  Widget buildInkWell({String text = "Text", int index}) {
+  Widget buildInkWell({String text = "Text", required int index}) {
     return Expanded(
       child: InkWell(
         onTap: () => onTap(index),

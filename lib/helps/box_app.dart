@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class BoxApp extends StatelessWidget {
   final Widget child;
   BoxApp({
-    this.child,
+    required this.child,
   });
   @override
   Widget build(BuildContext context) {

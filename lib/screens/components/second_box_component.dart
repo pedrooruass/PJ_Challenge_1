@@ -29,7 +29,7 @@ class SecondBoxComponent extends StatelessWidget {
     );
   }
 
-    Widget buildListTile({@required String image, @required String text = "Text", @required String value = "100k"}) {
+    Widget buildListTile({required String image,  String text = "Text", String value = "100k"}) {
     return ListTile(
       leading: CircleAvatar(
         backgroundColor: Colors.grey.shade200,

@@ -78,8 +78,7 @@ class _MainScreenState extends State<MainScreen> {
                 ),
                 SizedBox(height: 15),
                 // Scroll
-                Expanded(
-                  child: Column(
+                Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -88,8 +87,8 @@ class _MainScreenState extends State<MainScreen> {
                       SecondBoxComponent(),
                     ],
                   ),
-                ),
-              ],
+                  
+                            ],
             ),
           ),
         ],
