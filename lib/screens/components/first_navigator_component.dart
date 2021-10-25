@@ -39,10 +39,18 @@ class FirstNavigatorComponent extends StatelessWidget {
           alignment: Alignment.center,
           height: 30,
           decoration: BoxDecoration(
-              color: indexSelected == index
-                  ? AppColors.secondColor
-                  : Colors.transparent,
-              borderRadius: BorderRadius.circular(20)),
+            color: indexSelected == index
+                ? AppColors.secondColor
+                : Colors.transparent,
+            borderRadius: BorderRadius.circular(20),
+            gradient: LinearGradient(
+              colors: [
+                Color(0xFFFFC85B),
+                Color(0xFFEA7652),
+                AppColors.secondColor,
+              ],
+            ),
+          ),
           child: Text(
             text,
             style: TextStyle(
