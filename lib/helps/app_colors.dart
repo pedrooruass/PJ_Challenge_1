@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class AppColors {
@@ -6,5 +8,9 @@ class AppColors {
   // blue
   static get primaryColor => Color(0xFF0C56CA);
   // orange
-  static get secondColor => Color(0xFFEB7653);
+  static get secondColor => Color(0xFFDD6641);
+  // LinearGradient(colors: [
+  //       Color(0xFFFFC85B),
+  //       Color(0xFFEB7653),
+  //     ]);
 }
