@@ -1,12 +1,13 @@
-import 'package:challenge_app/helps/app_colors.dart';
-import 'package:challenge_app/helps/box_app.dart';
-import 'package:challenge_app/screens/components/first_box_component.dart';
-import 'package:challenge_app/screens/components/first_navigator_component.dart';
-import 'package:challenge_app/screens/components/net_worth_componet.dart';
-import 'package:challenge_app/screens/components/second_box_component.dart';
+import 'package:challenge_app/app/core/theme/app_colors.dart';
+import 'package:challenge_app/app/core/theme/box_app.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+
+import 'components/first_box_component.dart';
+import 'components/first_navigator_component.dart';
+import 'components/net_worth_componet.dart';
+import 'components/second_box_component.dart';
 
 class MainScreen extends StatefulWidget {
   @override

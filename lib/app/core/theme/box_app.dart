@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+//the padding for all the app
 class BoxApp extends StatelessWidget {
   final Widget child;
   BoxApp({

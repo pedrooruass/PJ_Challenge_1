@@ -1,4 +1,4 @@
-import 'package:challenge_app/helps/app_colors.dart';
+import 'package:challenge_app/app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class FirstNavigatorComponent extends StatelessWidget {
