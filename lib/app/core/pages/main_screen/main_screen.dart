@@ -111,7 +111,7 @@ class _MainScreenState extends State<MainScreen> {
         // ),
         bottomNavigationBar: SafeArea(
           child: Container(
-            margin: EdgeInsets.symmetric(horizontal: 10),
+            margin: EdgeInsets.only(left: 10, right: 10, bottom: 10),
             decoration: BoxDecoration(
                 color: AppColors.bottomColor,
                 borderRadius: BorderRadius.circular(20),
