@@ -90,6 +90,10 @@ class _MainScreenState extends State<MainScreen> {
                       NetWorthComponent(),
                       FirstBoxComponent(),
                       SecondBoxComponent(),
+                      SecondBoxComponent(),
+                      SecondBoxComponent(),
+                      SecondBoxComponent(),
+                      SecondBoxComponent(),
                     ],
                   ),
                 ],
@@ -107,31 +111,48 @@ class _MainScreenState extends State<MainScreen> {
         //     ],
         //   ),
         // ),
-        bottomNavigationBar: SalomonBottomBar(
-          selectedItemColor: AppColors.primaryColor,
-          items: [
-            SalomonBottomBarItem(
-              icon: Icon(Icons.house),
-              title: Text("Text"),
-            ),
-            SalomonBottomBarItem(
-              icon: Icon(Icons.calendar_today),
-              title: Text("Text"),
-            ),
-            SalomonBottomBarItem(
-              // icon: Icon(FontAwesomeIcons.chartPie),
-              icon: Icon(FontAwesomeIcons.circleNotch),
-              title: Text("Text"),
-            ),
-            SalomonBottomBarItem(
-              icon: Icon(FontAwesomeIcons.sortAmountUpAlt),
-              title: Text("Grow"),
-            ),
-            SalomonBottomBarItem(
-              icon: Icon(Icons.search),
-              title: Text("Text"),
-            ),
-          ],
+        bottomNavigationBar: Container(
+          margin: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+              color: AppColors.bottomColor,
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(
+                  color: AppColors.bottomColor,
+                  spreadRadius: 1,
+                  blurRadius: 3,
+                ),
+              ]),
+          child: SalomonBottomBar(
+            items: [
+              SalomonBottomBarItem(
+                  icon: Icon(Icons.house),
+                  title: Text("Text"),
+                  selectedColor: Colors.white,
+                  unselectedColor: Colors.white54),
+              SalomonBottomBarItem(
+                  icon: Icon(Icons.calendar_today),
+                  title: Text("Text"),
+                  selectedColor: Colors.white,
+                  unselectedColor: Colors.white54),
+              SalomonBottomBarItem(
+                  // icon: Icon(FontAwesomeIcons.chartPie),
+                  icon: Icon(FontAwesomeIcons.circleNotch),
+                  title: Text("Text"),
+                  selectedColor: Colors.white,
+                  unselectedColor: Colors.white54),
+              SalomonBottomBarItem(
+                  icon: Icon(FontAwesomeIcons.sortAmountUpAlt),
+                  title: Text("Grow"),
+                  selectedColor: Colors.white,
+                  unselectedColor: Colors.white54),
+              SalomonBottomBarItem(
+                  icon: Icon(Icons.search),
+                  title: Text("Text"),
+                  selectedColor: Colors.white,
+                  unselectedColor: Colors.white54),
+            ],
+          ),
         ));
   }
 }
