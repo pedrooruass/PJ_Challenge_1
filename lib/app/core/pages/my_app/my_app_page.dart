@@ -1,4 +1,4 @@
-import 'package:challenge_app/app/core/pages/main_screen/main_screen.dart';
+import 'package:challenge_app/app/core/pages/pages.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Hk Grotesk",
       ),
       debugShowCheckedModeBanner: false,
-      home: MainScreen(),
+      home: Pages(),
     );
   }
 }

@@ -23,7 +23,6 @@ class SecondBoxComponent extends StatelessWidget {
             color: Colors.grey.shade100,
           ),
           buildListTile(image: "asset/credit_card.png", text: "Debt", value: "130k"),
-          // TODO create list lile method, and put them.
         ],
       ),
     );
