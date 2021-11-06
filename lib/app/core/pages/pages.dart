@@ -14,6 +14,10 @@ class Pages extends StatefulWidget {
 class _PagesState extends State<Pages> {
   int index = 0;
 
+  PageController pageController = PageController(
+    initialPage: 3,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,14 +71,25 @@ class _PagesState extends State<Pages> {
           ),
           //Pages
           PageView(
+            controller: pageController,
             children: [
+              CalendarScreen(),
+              CalendarScreen(),
+              CalendarScreen(),
               MainScreen(),
               CalendarScreen(),
             ],
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBarWidget(),
+      bottomNavigationBar: BottomNavigationBarWidget(
+          index: index,
+          onTap: (index) {
+            setState(() {
+              this.index = index;
+              pageController.jumpToPage(index);
+            });
+          }),
     );
   }
 }
