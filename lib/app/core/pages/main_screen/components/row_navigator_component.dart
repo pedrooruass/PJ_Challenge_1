@@ -7,12 +7,16 @@ class RowNavigatorComponent extends StatelessWidget {
   final String name1;
   final String name2;
   final String name3;
+  final String? name4;
+  final String? name5;
   RowNavigatorComponent({
     required this.onTap,
     required this.indexSelected,
     required this.name1,
     required this.name2,
     required this.name3,
+    this.name4,
+    this.name5,
   });
   @override
   Widget build(BuildContext context) {
@@ -33,6 +37,9 @@ class RowNavigatorComponent extends StatelessWidget {
               buildInkWell(text: name1, index: 0),
               buildInkWell(text: name2, index: 1),
               buildInkWell(text: name3, index: 2),
+              if(name4 != null) buildInkWell(text: name4!, index: 3),
+              if(name5 != null) buildInkWell(text: name5!, index: 4),
+              
             ],
           ),
         ),

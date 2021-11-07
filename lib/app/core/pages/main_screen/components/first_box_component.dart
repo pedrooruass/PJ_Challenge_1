@@ -44,6 +44,7 @@ class _FirstBoxComponentState extends State<FirstBoxComponent> {
               name1: "1M",
               name2: "3M",
               name3: "6M",
+              name4: "1Y",
             ),
           ),
         ],
