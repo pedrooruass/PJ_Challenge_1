@@ -13,6 +13,19 @@ class Pages extends StatefulWidget {
 
 class _PagesState extends State<Pages> {
   int index = 0;
+  List<Widget> pages = [
+    CalendarScreen(),
+    Container(
+      color: Colors.red,
+    ),
+    Container(
+      color: Colors.green,
+    ),
+    MainScreen(),
+    Container(
+      color: Colors.blue,
+    ),
+  ];
 
   PageController pageController = PageController(
     initialPage: 3,
@@ -73,11 +86,13 @@ class _PagesState extends State<Pages> {
           PageView(
             controller: pageController,
             children: [
-              CalendarScreen(),
-              CalendarScreen(),
-              CalendarScreen(),
-              MainScreen(),
-              CalendarScreen(),
+              // CalendarScreen(),
+              // CalendarScreen(),
+              // CalendarScreen(),
+              // MainScreen(),
+              // CalendarScreen(),
+
+              ...pages,
             ],
           ),
         ],
