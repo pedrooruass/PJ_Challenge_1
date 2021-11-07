@@ -1,10 +1,19 @@
 import 'package:challenge_app/app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
-class FirstNavigatorComponent extends StatelessWidget {
+class RowNavigatorComponent extends StatelessWidget {
   final void Function(int) onTap;
   final int indexSelected;
-  FirstNavigatorComponent({required this.onTap, required this.indexSelected});
+  final String name1;
+  final String name2;
+  final String name3;
+  RowNavigatorComponent({
+    required this.onTap,
+    required this.indexSelected,
+    required this.name1,
+    required this.name2,
+    required this.name3,
+  });
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -21,9 +30,9 @@ class FirstNavigatorComponent extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              buildInkWell(text: "Sumary", index: 0),
-              buildInkWell(text: "Assets", index: 1),
-              buildInkWell(text: "Debt", index: 2),
+              buildInkWell(text: name1, index: 0),
+              buildInkWell(text: name2, index: 1),
+              buildInkWell(text: name3, index: 2),
             ],
           ),
         ),

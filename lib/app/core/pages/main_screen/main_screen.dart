@@ -2,7 +2,7 @@ import 'package:challenge_app/app/core/theme/box_app.dart';
 import 'package:flutter/material.dart';
 
 import 'components/first_box_component.dart';
-import 'components/first_navigator_component.dart';
+import 'components/row_navigator_component.dart';
 import 'components/net_worth_componet.dart';
 import 'components/second_box_component.dart';
 
@@ -18,36 +18,38 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return BoxApp(
-            child: ListView(
-              padding: EdgeInsets.only(top: 15, bottom: 10),
-              children: [
-                FirstNavigatorComponent(
-                  onTap: (touchValue) {
-                    setState(() {
-                      index = touchValue;
-                    });
-                  },
-                  indexSelected: index,
-                ),
-                SizedBox(height: 15),
-                // Scroll
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    NetWorthComponent(),
-                    FirstBoxComponent(),
-                    SecondBoxComponent(),
-                    // Take all this out after
-                    SecondBoxComponent(),
-                    SecondBoxComponent(),
-                    SecondBoxComponent(),
-                    SecondBoxComponent(),
-                  ],
-                ),
-              ],
-            ),
-          );
-    
+      child: ListView(
+        padding: EdgeInsets.only(top: 15, bottom: 10),
+        children: [
+          RowNavigatorComponent(
+            onTap: (touchValue) {
+              setState(() {
+                index = touchValue;
+              });
+            },
+            indexSelected: index,
+            name1: "Sumary",
+            name2: "Assets",
+            name3: "Debt",
+          ),
+          SizedBox(height: 15),
+          // Scroll
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              NetWorthComponent(),
+              FirstBoxComponent(),
+              SecondBoxComponent(),
+              // Take all this out after
+              SecondBoxComponent(),
+              SecondBoxComponent(),
+              SecondBoxComponent(),
+              SecondBoxComponent(),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
