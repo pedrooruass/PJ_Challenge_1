@@ -32,12 +32,15 @@ class _MainScreenState extends State<MainScreen> {
             name2: "Assets",
             name3: "Debt",
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 20),
           // Scroll
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
+              SizedBox(
+                height: 20,
+              ),
               NetWorthComponent(),
               FirstBoxComponent(),
               SecondBoxComponent(),

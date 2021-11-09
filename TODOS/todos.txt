@@ -1,4 +1,5 @@
-Arrumar o scroll && Sincronizar com o bottom navigation bar,
+Arrumar o scroll && Sincronizar com o bottom navigation bar, - Done
 Arrumar padding entre numeros e quadrado,
-Ver se tem como fazer uma appbar q nem o responsive soq colocand borderRadius and Shadow
 make the method good separated and with 5 paramenters - Done Pohaa
+
+Parei arrumando o Padding dos widgets e do box, try to make 

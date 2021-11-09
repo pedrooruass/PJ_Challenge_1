@@ -27,9 +27,13 @@ class _PagesState extends State<Pages> {
     ),
   ];
 
-  PageController pageController = PageController(
-    initialPage: 3,
-  );
+  PageController pageController = PageController(initialPage: 3);
+
+  @override
+  void initState() {
+    super.initState();
+    pageController.notifyListeners();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,8 +73,8 @@ class _PagesState extends State<Pages> {
               //COLOCAR O 0xFF ANTES
               color: AppColors.primaryColor,
               borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(20),
-                bottomRight: Radius.circular(20),
+                bottomLeft: Radius.circular(18),
+                bottomRight: Radius.circular(18),
               ),
               boxShadow: [
                 BoxShadow(
@@ -80,7 +84,7 @@ class _PagesState extends State<Pages> {
               ],
             ),
             width: double.infinity,
-            height: 275,
+            height: 250,
           ),
           //Pages
           PageView(

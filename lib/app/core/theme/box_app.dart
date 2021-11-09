@@ -8,7 +8,7 @@ class BoxApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 25),
+      padding: EdgeInsets.symmetric(horizontal: 23.5),
       child: child,
     );
   }
